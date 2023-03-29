@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown Example</title>
+  </head>
+  <body>
+    <button onclick="startCountdown()">Start Countdown</button>
+    <script>
+      function countdown(num) {
+        const timer = setInterval(() => {
+          num--;
+          console.log(num);
+          if (num === 0) {
+            console.log('DONE!');
+            clearInterval(timer);
+          }
+        }, 1000);
+      }
+
+      function startCountdown() {
+        countdown(10);
+      }
+    </script>
+    <script src="Timer.js"></script>
+  </body>
+</html>
